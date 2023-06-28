@@ -1,4 +1,4 @@
-export default [
+const questions= [
   {
     question: "Which of the following is linear data structure?",
     options: [
@@ -130,133 +130,266 @@ export default [
     correctAnswerIndex: 2,
   },
   {
-    question: "In what contintent is Indonesia?",
+    question: "What is a database?",
     options: [
       {
         id: "0",
         options: "A",
-        answer: "South America",
+        answer: "Organized collection of information that cannot be accessed, updated, and managed",
       },
       {
         id: "1",
         options: "B",
-        answer: "Europe",
+        answer: "Organized collection of data that cannot be updated",
       },
       {
         id: "2",
         options: "C",
-        answer: "Asia",
+        answer: "Collection of data or information without organizing",
       },
       {
         id: "0",
         options: "D",
-        answer: "India",
+        answer: "Organized collection of data or information that can be accessed, updated, and managed",
+      },
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    question: "Which of the following is not a type of database?",
+    options: [
+      {
+        id: "0",
+        options: "A",
+        answer: "Hierarchical",
+      },
+      {
+        id: "1",
+        options: "B",
+        answer: "Decentralized",
+      },
+      {
+        id: "2",
+        options: "C",
+        answer: "Distributed",
+      },
+      {
+        id: "0",
+        options: "D",
+        answer: "Network",
+      },
+    ],
+    correctAnswerIndex: 1,
+  },
+  {
+    question: "Which of the following is not a feature of DBMS?",
+    options: [
+      {
+        id: "0",
+        options: "A",
+        answer: "Minimum Duplication and Redundancy of Data",
+      },
+      {
+        id: "1",
+        options: "B",
+        answer: "High Level of Security",
+      },
+      {
+        id: "2",
+        options: "C",
+        answer: "Single-user Access only"
+        ,
+      },
+      {
+        id: "0",
+        options: "D",
+        answer: "Support ACID Property",
       },
     ],
     correctAnswerIndex: 2,
   },
   {
-    question: "In what contintent is Indonesia?",
+    question: "Which of the following is not a function of the database?",
     options: [
       {
         id: "0",
         options: "A",
-        answer: "South America",
+        answer: "Managing stored data",
       },
       {
         id: "1",
         options: "B",
-        answer: "Europe",
+        answer: "Manipulating data",
       },
       {
         id: "2",
         options: "C",
-        answer: "Asia",
+        answer: "Security for stored data",
       },
       {
         id: "0",
         options: "D",
-        answer: "India",
+        answer: "Analysing code",
+      },
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    question: "What does an RDBMS consist of?",
+    options: [
+      {
+        id: "0",
+        options: "A",
+        answer: "Collection of Records",
+      },
+      {
+        id: "1",
+        options: "B",
+        answer: "Collection of Keys",
+      },
+      {
+        id: "2",
+        options: "C",
+        answer: "Collection of Tables",
+      },
+      {
+        id: "0",
+        options: "D",
+        answer: "Collection of Fields",
       },
     ],
     correctAnswerIndex: 2,
   },
   {
-    question: "In what contintent is Indonesia?",
+    question: "Which is not a feature of OOP in general definitions?",
     options: [
       {
         id: "0",
         options: "A",
-        answer: "South America",
+        answer: "Efficient Code",
       },
       {
         id: "1",
         options: "B",
-        answer: "Europe",
+        answer: "Code reusability",
       },
       {
         id: "2",
         options: "C",
-        answer: "Asia",
+        answer: "Modularity",
       },
       {
         id: "0",
         options: "D",
-        answer: "India",
+        answer: "Duplicate/Redundant data",
       },
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
   },
   {
-    question: "In what contintent is Indonesia?",
+    question: "Which feature of OOP indicates code reusability?",
     options: [
       {
         id: "0",
         options: "A",
-        answer: "South America",
+        answer: "Abstraction",
       },
       {
         id: "1",
         options: "B",
-        answer: "Europe",
+        answer: "Polymorphism",
       },
       {
         id: "2",
         options: "C",
-        answer: "Asia",
+        answer: "Encapsulation",
       },
       {
         id: "0",
         options: "D",
-        answer: "India",
+        answer: "Inheritance",
       },
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 3,
   },
   {
-    question: "In what contintent is Indonesia?",
+    question: "Why Java is Partially OOP language?",
     options: [
       {
         id: "0",
         options: "A",
-        answer: "South America",
+        answer: "It allows code to be written outside classes",
       },
       {
         id: "1",
         options: "B",
-        answer: "Europe",
+        answer: "It supports usual declaration of primitive data types",
       },
       {
         id: "2",
         options: "C",
-        answer: "Asia",
+        answer: "It does not support pointers",
       },
       {
         id: "0",
         options: "D",
-        answer: "India",
+        answer: "It doesn’t support all types of inheritance",
       },
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 1,
+  },
+  {
+    question: "The feature by which one object can interact with another object is _______",
+    options: [
+      {
+        id: "0",
+        options: "A",
+        answer: " Message reading",
+      },
+      {
+        id: "1",
+        options: "B",
+        answer: "Message Passing",
+      },
+      {
+        id: "2",
+        options: "C",
+        answer: "Data transfer",
+      },
+      {
+        id: "0",
+        options: "D",
+        answer: "Data Binding",
+      },
+    ],
+    correctAnswerIndex: 1,
+  },
+  {
+    question: "Which of the following is not true about polymorphism?",
+    options: [
+      {
+        id: "0",
+        options: "A",
+        answer: "Helps in redefining the same functionality",
+      },
+      {
+        id: "1",
+        options: "B",
+        answer: "Increases overhead of function definition always",
+      },
+      {
+        id: "2",
+        options: "C",
+        answer: "It is feature of OOP",
+      },
+      {
+        id: "0",
+        options: "D",
+        answer: "Ease in readability of program",
+      },
+    ],
+    correctAnswerIndex: 1,
   },
 ];
+
+export default questions;

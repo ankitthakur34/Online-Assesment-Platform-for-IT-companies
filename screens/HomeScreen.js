@@ -23,21 +23,23 @@ const HomeScreen = ({ navigation }) => {
         <Text
           style={{
             textAlign: "center",
-            color: "magenta",
-            fontSize: 20,
-            fontWeight: "600",
+            color: "#696969",
+            fontWeight: "900",
+            fontSize: 24,
+            letterSpacing: 1,
           }}
         >
           {" "}
-          TEST RULES-{" "}
+          TEST RULES -{" "}
         </Text>
 
         <View
           style={{
-            padding: 10,
-            backgroundColor: "#F88379",
-            borderRadius: 6,
+            padding: 13,
+            backgroundColor: "#A9A9A9",
+            borderRadius: 4,
             marginTop: 15,
+            marginHorizontal: 10,
           }}
         >
           <View
@@ -50,7 +52,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ fontSize: 15, fontWeight: 600 }}>*</Text>
             <Text style={{ fontSize: 15, fontWeight: 600, marginLeft: 6 }}>
               {" "}
-              For each correct answer you get 5 points
+              For each correct answer you get 10 points.
             </Text>
           </View>
           <View
@@ -63,7 +65,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ fontSize: 15, fontWeight: 600 }}>*</Text>
             <Text style={{ fontSize: 15, fontWeight: 600, marginLeft: 6 }}>
               {" "}
-              There is no negative marking for wrong answer
+              There is no negative marking for wrong answer.
             </Text>
           </View>
           <View
@@ -76,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ fontSize: 15, fontWeight: 600 }}>*</Text>
             <Text style={{ fontSize: 15, fontWeight: 600, marginLeft: 6 }}>
               {" "}
-              Each question has a time limit of 30 sec
+              Each question has a time limit of 30 sec.
             </Text>
           </View>
           <View
@@ -89,7 +91,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ fontSize: 15, fontWeight: 600 }}>*</Text>
             <Text style={{ fontSize: 15, fontWeight: 600, marginLeft: 6 }}>
               {" "}
-              You should answer all the questions compulsarily
+              You should answer all the questions compulsarily.
             </Text>
           </View>
         </View>
@@ -97,7 +99,7 @@ const HomeScreen = ({ navigation }) => {
         <TouchableOpacity
           onPress={() => navigation.navigate("Test")}
           style={{
-            backgroundColor: "magenta",
+            backgroundColor: "#696969",
             padding: 14,
             width: 150,
             borderRadius: 25,
@@ -107,7 +109,7 @@ const HomeScreen = ({ navigation }) => {
           }}
         >
           <Text
-            style={{ color: "white", fontWeight: "600", textAlign: "center" }}
+            style={{ color: "white", fontWeight: "800", textAlign: "center",letterSpacing:1,textTransform:"uppercase" }}
           >
             Start Test
           </Text>

@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "OnlineTestApp",
+    "name": "Online-Assesment-platform",
     "slug": "OnlineTestApp",
+    "description": "By leveraging this technology, I have developed an intuitive and user-friendly interface that caters to the specific needs of IT companies and candidates. The app incorporates essential features such as assessment creation, various question types, timer and progress tracking, submission and result feedback, analytics and reporting, Name:Ankit Singh Thakur",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/old_logo=.png",
+    "icon": "./assets/old_logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/sIcon.png",
+      "image": "./assets/old_logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +16,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "oas-ios"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ankit_003.OnlineTestApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ace3876c-f0ca-4fba-acb4-68561d6e71a4"
+      }
     }
   }
 }

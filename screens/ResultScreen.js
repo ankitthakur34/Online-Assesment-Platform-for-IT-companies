@@ -5,8 +5,9 @@ import {
   View,
   Pressable,
   FlatList,
+  ActivityIndicator
 } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRoute } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -16,10 +17,30 @@ const ResultScreen = ({ navigation }) => {
   const data = questions;
 
   const route = useRoute();
-  //  console.log(route.params);
+    // console.log(route.params.answers);
+    // console.log(route.params.point)
+
+    const [show,setShow] = useState(true);
+
+    useEffect(()=>{
+
+      setTimeout(()=>{
+         setShow(false)
+      },6000)
+
+    },)
 
   return (
-    <View style={{ margin: 10 }}>
+    <View style={{ margin: 10 }}> 
+  
+  { show? 
+   <View style={{flexDirection:"column", justifyContent:"center",alignItems:"center"}} >
+    <ActivityIndicator size={80} animating={show} color ="grey" />
+    <Text>Calculating Result....</Text>
+    </View>
+    : 
+    
+    <View>
       <View
         style={{
           flexDirection: "row",
@@ -29,13 +50,15 @@ const ResultScreen = ({ navigation }) => {
         }}
       >
         <Text>Your Result</Text>
-        <Text>Share</Text>
+        <View style={{flexDirection:"row"}} >
+        <Text  >Share</Text>
         <AntDesign
           style={{ marginLeft: 4 }}
           name="sharealt"
           size={18}
           color="black"
         />
+        </View>
       </View>
 
       <View
@@ -60,11 +83,14 @@ const ResultScreen = ({ navigation }) => {
       >
         <Text
           style={{
-            color: "magenta",
-            fontSize: 15,
+            color: "#696969",
+            fontSize: 19,
             fontWeight: "500",
             textAlign: "center",
             marginTop: 8,
+            textTransform:"uppercase",
+            letterSpacing:1,
+            marginBottom:10
           }}
         >
           Score Card
@@ -123,6 +149,8 @@ const ResultScreen = ({ navigation }) => {
           <Text>{route.params.point}</Text>
         </View>
       </Pressable>
+      </View>
+  }
     </View>
   );
 };

@@ -57,13 +57,14 @@ const TestScreen = () => {
 
   // useEffect for adding answers in answer array after every question
   useEffect(() => {
+    if (answerStatus === true) {
+      setPoint(point + 10);
+    }
     if (answerStatus !== null) {
       answers.push({ questions: index, answer: answerStatus });
     }
 
-    if (answerStatus === true) {
-      setPoint(point + 10);
-    }
+    
   }, [index]);
 
   // console.warn(answers)
@@ -100,7 +101,9 @@ const TestScreen = () => {
     }
   }, [index]);
 
-  // console.warn(selectedAnswerIndex)
+   console.log(index);
+  // console.log(point);
+//  console.log(answers);
 
   const data = questions;
   const currentQuestion = data[index];
@@ -110,12 +113,31 @@ const TestScreen = () => {
   // if questions are over navigate to result screen
   useEffect(() => {
     if (index >= data.length) {
+      clearTimeout(interval)
       navigation.navigate("Result", {
         answers: answers,
         point: point,
       });
     }
-  }, [currentQuestion]);
+  }, [index]);
+
+  // to stop the counter
+  useEffect(() => {
+    if (index == data.length+3) {
+     setCounter(-1);
+    }
+  }, [index]);
+
+  const changeScreen=()=>{
+    clearTimeout(interval)
+    setindex(index+1)
+    navigation.navigate("Result", {
+      point: point,
+
+      answers: answers,
+    })
+  }
+ 
   return (
     <View>
       <View>
@@ -184,7 +206,7 @@ const TestScreen = () => {
           {currentQuestion?.question}
         </Text>
 
-        <View style={{ marginTop: 12 }}>
+        <View style={{ marginTop: 12, }}>
           {currentQuestion?.options.map((item, index) => (
             <TouchableOpacity
               key={index}
@@ -195,6 +217,9 @@ const TestScreen = () => {
                 borderWidth: 0.5,
                 borderRadius: 20,
                 marginVertical: 10,
+              
+              
+              
               }}
             >
               <Text
@@ -203,7 +228,7 @@ const TestScreen = () => {
                     selectedAnswerIndex === index ? "grey" : "white",
                   textAlign: "center",
                   borderWidth: 0.5,
-                  width: 40,
+                  width: "auto",
                   height: 40,
                   borderRadius: 20,
                   padding: 10,
@@ -212,7 +237,7 @@ const TestScreen = () => {
               >
                 {item.options}
               </Text>
-              <Text>{item.answer} </Text>
+              <Text style={{flex: 1, flexWrap: 'wrap'}} >{item.answer} </Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -220,12 +245,10 @@ const TestScreen = () => {
       <View>
         {index + 1 >= questions.length ? (
           <Pressable
-            onPress={() =>
-              navigation.navigate("Result", {
-                point: point,
+            onPress={() => 
 
-                answers: answers,
-              })
+            changeScreen()
+             
             }
             style={{
               backgroundColor: "green",
